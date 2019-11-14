@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <!-- Page title start -->
+        <div class="col-sm-12 col-md-12">
+            <h1 class="text-center header">Flicker Public Feeds.</h1>
+        </div>
+        <!-- Page title end -->
+
+        <!-- Search tag input start -->
+        <div class="col-sm-12 col-md-12">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" ref-search (keyup.enter)="getProfiles(search.value)" placeholder="Search photos, people, or groups" aria-label="Search photos, people, or groups" id="inp-search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" on-click="getProfiles(search.value)" type="button" id="btn-search"><i class="fa fa-search"></i></button>
+                </div>
+            </div>   
+        </div>
+        <!-- Search tag input end  -->
+
+        <!-- Image gallery content start -->
+        <div class="col-sm-12 col-md-12">
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>  
+        </div>
+        <!-- Image gallery content end -->
+    </div>
+</div>
